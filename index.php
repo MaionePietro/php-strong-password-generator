@@ -1,6 +1,6 @@
 <?php
     $lengthPassword = intval($_GET["lunghezza_password"]);
-    var_dump($lengthPassword);
+    //var_dump($lengthPassword);
 
     function generatePassword($lengthPassword) {
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+';
@@ -29,9 +29,9 @@
             <h1 class="d-flex justify-content-center" style="color: #758290;">Strong Password Generator</h1>
             <h2 class="d-flex justify-content-center" style="color: white;">Genera una password sicura</h2>
         </div>
-        <div>
+        <div class="p-3 my-4 rounded" style="background-color: #C8F2FC;">
             <h3>
-                <?php // echo $password; ?>
+                Password generata: <?php  echo generatePassword(); ?>
             </h2>
         </div>
         <form action="" method="GET" style="background-color: white;" class="px-5 py-2 rounded">           
