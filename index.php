@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="button px-5 py-2">
-                <button type="button" class="btn btn-primary btn-lg">Invia</button>
+                <button type="submit" class="btn btn-primary btn-lg">Invia</button>
                 <!-- <button type="button" class="btn btn-secondary btn-lg">Annulla</button> -->
             </div>
         </form>
