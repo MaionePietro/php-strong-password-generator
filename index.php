@@ -1,3 +1,8 @@
+<?php
+    $lengthPassword = $_GET["lunghezza_password"];
+    var_dump($lengthPassword);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,61 +18,57 @@
             <h1 class="d-flex justify-content-center" style="color: #758290;">Strong Password Generator</h1>
             <h2 class="d-flex justify-content-center" style="color: white;">Genera una password sicura</h2>
         </div>
-        <div>
-
-        </div>
         <form action="" method="GET" style="background-color: white;" class="px-5 py-2 rounded">
-            <div>
-                <div class="d-flex justify-content-between px-5 py-2">
-                    <label for="customRange1" class="form-label">Lunghezza pasword: </label>
-                    <input type="range" class="form-range w-25" id="customRange1">
+            
+            <div class="d-flex justify-content-between px-5 py-2">
+                <label for="customRange1" class="form-label">Lunghezza pasword: </label>
+                <input type="range" class="form-range w-25" name="lunghezza_password" min="6" max="20" value="10">
+            </div>
+            <div class="d-flex justify-content-between px-5 py-2">
+                <div>
+                    <span>Consenti ripetizioni di uno o più caratteri</span>
                 </div>
-                <div class="d-flex justify-content-between px-5 py-2">
-                    <div>
-                        <span>Consenti ripetizioni di uno o più caratteri</span>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            si
+                        </label>
                     </div>
-                    <div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                si
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                no
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between px-5 py-2">
-                    <div></div>
-                    <div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            Lettere
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                          <label class="form-check-label" for="flexCheckChecked">
-                            Numeri
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                          <label class="form-check-label" for="flexCheckChecked">
-                            Simboli
-                          </label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault"checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            no
+                        </label>
                     </div>
                 </div>
-                <div class="button px-5 py-2">
-                    <button type="button" class="btn btn-primary btn-lg">Invia</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Annulla</button>
+            </div>
+            <div class="d-flex justify-content-between px-5 py-2">
+                <div></div>
+                <div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" checked>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Lettere
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" checked>
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Numeri
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" checked>
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Simboli
+                      </label>
+                    </div>
                 </div>
+            </div>
+            <div class="button px-5 py-2">
+                <button type="button" class="btn btn-primary btn-lg">Invia</button>
+                <!-- <button type="button" class="btn btn-secondary btn-lg">Annulla</button> -->
             </div>
         </form>
     </div>
