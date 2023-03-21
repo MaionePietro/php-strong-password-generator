@@ -1,6 +1,16 @@
 <?php
     $lengthPassword = $_GET["lunghezza_password"];
     var_dump($lengthPassword);
+
+    function generatePassword($lengthPassword) {
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+';
+        $password = '';
+        for ($i = 0; $i < $lengthPassword; $i++) {
+          $password .= $chars[rand(0, strlen($chars) - 1)];
+        }
+        return $password;
+    };
+    $password = generatePassword();
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +28,12 @@
             <h1 class="d-flex justify-content-center" style="color: #758290;">Strong Password Generator</h1>
             <h2 class="d-flex justify-content-center" style="color: white;">Genera una password sicura</h2>
         </div>
-        <form action="" method="GET" style="background-color: white;" class="px-5 py-2 rounded">
-            
+        <div>
+            <h3>
+                <?php echo $password; ?>
+            </h2>
+        </div>
+        <form action="" method="GET" style="background-color: white;" class="px-5 py-2 rounded">           
             <div class="d-flex justify-content-between px-5 py-2">
                 <label for="customRange1" class="form-label">Lunghezza pasword: </label>
                 <input type="range" class="form-range w-25" name="lunghezza_password" min="6" max="20" value="10">
