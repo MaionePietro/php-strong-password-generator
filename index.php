@@ -1,5 +1,5 @@
 <?php
-    $lengthPassword = $_GET["lunghezza_password"];
+    $lengthPassword = intval($_GET["lunghezza_password"]);
     var_dump($lengthPassword);
 
     function generatePassword($lengthPassword) {
@@ -10,7 +10,8 @@
         }
         return $password;
     };
-    $password = generatePassword();
+    //$password = generatePassword();
+    //var_dump(generatePassword());
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@
         </div>
         <div>
             <h3>
-                <?php echo $password; ?>
+                <?php // echo $password; ?>
             </h2>
         </div>
         <form action="" method="GET" style="background-color: white;" class="px-5 py-2 rounded">           
